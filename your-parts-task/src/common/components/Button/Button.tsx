@@ -1,3 +1,4 @@
+"use client";
 import type { ReactNode } from "react";
 
 type Size = "small" | "medium" | "large";
@@ -40,9 +41,9 @@ export const Button = ({
 	loading = false,
 }: ButtonProps) => {
 	const sizeClasses = {
-		small: "px-1.5 py-1 text-xs",
-		medium: "px-3 py-2 text-sm",
-		large: "px-5 py-3 text-base",
+		small: "px-1 py-1 text-xs",
+		medium: "px-4 py-2 text-sm",
+		large: "px-6 py-2 text-base",
 	};
 
 	const iconSizes = {
@@ -92,7 +93,7 @@ export const Button = ({
 	const buttonClasses = `
     ${sizeClasses[size]} 
     ${colorClasses[color][variant]} 
-    font-semibold rounded-lg focus:outline-none focus:ring-1 focus:ring-opacity-50 
+    font-semibold rounded-md focus:outline-none focus:ring-1 focus:ring-opacity-50 
     ${disabled ? "opacity-50 cursor-not-allowed" : ""} 
     ${className}
   `;

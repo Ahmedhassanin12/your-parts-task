@@ -1,6 +1,6 @@
 import type { ChangeEvent, HTMLInputTypeAttribute, ReactNode } from "react";
 
-type InputProps = {
+export type InputProps = {
 	label?: string;
 	value: string;
 	onChange: (value: ChangeEvent<HTMLInputElement>) => void;
@@ -32,16 +32,23 @@ export function Input(props: InputProps) {
 
 	return (
 		<div>
-			{label && (
-				<label
-					htmlFor={label}
-					className={`block text-sm font-medium text-gray-700 mb-1 ${labelClassName}`}
-				>
-					{label}
-				</label>
-			)}
+			<div className="flex items-center gap-2">
+				{label && (
+					<label
+						htmlFor={label}
+						className={`block text-sm font-medium text-gray-700 mb-1 ${labelClassName}`}
+					>
+						{label}
+					</label>
+				)}
+				{feedback && (
+					<p className=" text-sm text-red-400">
+						<span className="font-bold">*</span> Required
+					</p>
+				)}
+			</div>
 			<div
-				className={`border border-gray-200 rounded-lg flex gap-2 items-center pointer-events-none text-gray-500 focus-within:ring-blue-300 focus-within:ring-2 duration-200 ${className}`}
+				className={`border border-gray-200 rounded-md flex gap-2 items-center py-1 min-w-[250px] text-gray-500 focus-within:ring-blue-300 focus-within:ring-2 duration-200 ${className}`}
 			>
 				<div className="flex gap-2 items-center w-full">
 					{icon ?? null}
@@ -55,11 +62,6 @@ export function Input(props: InputProps) {
 						disabled={disabled}
 					/>
 				</div>
-				{feedback && (
-					<p className="mt-2 text-sm text-gray-500">
-						<span className="font-bold">*</span> Field is required
-					</p>
-				)}
 			</div>
 		</div>
 	);
