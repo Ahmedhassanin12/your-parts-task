@@ -1,0 +1,18 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "Navigation": {
+    "home": "Home",
+    "comments": "Comments",
+    "social": "social"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ar {🇪🇬 العربيه} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Settings": {
+    "Settings": "Settings"
+  }
+}

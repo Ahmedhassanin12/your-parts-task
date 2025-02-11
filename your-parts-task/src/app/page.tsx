@@ -1,9 +1,6 @@
-import HomeModule from "@/modules/Home/HomeModule";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-	return (
-		<main className="bg-slate-100 rounded-lg shadow h-screen overflow-hidden">
-			<HomeModule />
-		</main>
-	);
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+	redirect("/en");
 }

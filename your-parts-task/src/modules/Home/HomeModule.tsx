@@ -23,7 +23,7 @@ const HomeModule = () => {
 		},
 	});
 
-	const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
+	const [, setRowSelection] = useState<RowSelectionState>({});
 
 	const columns = useMemo<ColumnDef<IPostType>[]>(
 		() => [
@@ -54,7 +54,6 @@ const HomeModule = () => {
 	);
 
 	const getRowId = (row: IPostType) => String(row.id);
-	console.log({ data, isLoading, error, refetch, rowSelection });
 	return (
 		<section className="py-4 px-1 h-full overflow-auto bg-zinc-400">
 			{isLoading ? (

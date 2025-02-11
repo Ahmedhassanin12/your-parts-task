@@ -1,0 +1,18 @@
+{
+  "HomePage": {
+    "title": "مزحبا بك",
+    "about": "اذهب الر من نحن"
+  },
+  "Navigation": {
+    "home": "االريسيه",
+    "comments": "التعليقات",
+    "social": "تواصل"
+  },
+  "LocaleSwitcher": {
+    "label": "تغيير اللغه",
+    "locale": "{locale, select, ar {🇪🇬 العربيه} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Settings": {
+    "Settings": "الضبط"
+  }
+}
