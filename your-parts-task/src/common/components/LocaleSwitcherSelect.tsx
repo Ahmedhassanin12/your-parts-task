@@ -16,11 +16,10 @@ const LocaleSwitcherSelect = ({ defaultValue, children, label }: Props) => {
 
 	function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
 		const nextLocale = event.target.value as Locale;
-		console.log({ nextLocale });
 
 		startTransition(() => {
-			// Construct the new URL with the updated locale
-			const newPathname = `/${nextLocale}/${pathname}`;
+			const pathWithoutLocale = pathname.split("/").slice(2).join("/");
+			const newPathname = `/${nextLocale}/${pathWithoutLocale}`;
 			router.replace(newPathname);
 		});
 	}
