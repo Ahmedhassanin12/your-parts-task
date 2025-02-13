@@ -57,7 +57,7 @@ const TanStackTable = <T,>(props: TanStackTableProps<T>) => {
 
 	const [sorting, setSorting] = useState<ColumnSort[]>([
 		{
-			id: "name",
+			id: columns[0].id ?? "",
 			desc: true,
 		},
 	]);

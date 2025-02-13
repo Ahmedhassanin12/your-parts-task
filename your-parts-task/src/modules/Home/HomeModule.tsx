@@ -32,7 +32,6 @@ const HomeModule = () => {
 			return await deletePost(id);
 		},
 		onSuccess: () => {
-			// Invalidate and refetch
 			queryClient.invalidateQueries({ queryKey: ["POSTS"] });
 		},
 	});
