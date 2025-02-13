@@ -110,19 +110,16 @@ const TanStackTable = <T,>(props: TanStackTableProps<T>) => {
 		debugTable: true,
 		debugHeaders: true,
 		debugColumns: false,
-
 		data: data ?? defaultData,
 		columns: tableColumns,
 		getCoreRowModel: getCoreRowModel(),
 		getRowId,
 		pageCount,
-
 		defaultColumn: {
 			size: 200,
 			minSize: 250,
-			maxSize: 600,
+			maxSize: 400,
 		},
-
 		state: {
 			columnVisibility,
 			columnPinning,
@@ -131,24 +128,16 @@ const TanStackTable = <T,>(props: TanStackTableProps<T>) => {
 			sorting,
 			rowSelection: internalRowSelection,
 		},
-
-		filterFns: {},
-
 		manualPagination: true,
+		enableRowSelection: true,
 		onColumnPinningChange: setColumnPinning,
-
 		onPaginationChange: setPagination,
 		getPaginationRowModel: getPaginationRowModel(),
-
 		onSortingChange: setSorting,
 		getSortedRowModel: getSortedRowModel(),
-
 		onColumnFiltersChange: setColumnFilters,
 		getFilteredRowModel: getFilteredRowModel(),
-
-		enableRowSelection: true,
 		onRowSelectionChange: setInternalRowSelection,
-
 		onColumnVisibilityChange: setColumnVisibility,
 	});
 
@@ -169,7 +158,7 @@ const TanStackTable = <T,>(props: TanStackTableProps<T>) => {
 
 	return (
 		<div
-			className="flex flex-col overflow-hidden"
+			className="h-full w-full flex flex-col overflow-hidden"
 			style={{
 				...(fullScreen && {
 					position: "fixed",
@@ -216,7 +205,6 @@ const TanStackTable = <T,>(props: TanStackTableProps<T>) => {
 								{headerGroup.headers.map((header, index) => (
 									<th
 										key={header.id}
-										colSpan={header.colSpan}
 										className={`text-left text-xs font-medium text-gray-800 uppercase tracking-wider ${
 											index + 1 !== headerGroup.headers.length ? "border-r" : ""
 										}`}
@@ -257,7 +245,7 @@ const TanStackTable = <T,>(props: TanStackTableProps<T>) => {
 						))}
 					</thead>
 					<tbody className="divide-y divide-gray-200">
-						{table.getRowModel().rows?.length === 0 ? (
+						{table?.getRowModel()?.rows?.length === 0 ? (
 							<tr
 								className="h-20"
 								style={{
@@ -277,12 +265,12 @@ const TanStackTable = <T,>(props: TanStackTableProps<T>) => {
 								</td>
 							</tr>
 						) : (
-							table.getRowModel().rows.map((row) => (
-								<tr key={row.id} className="max-w-[300px]">
+							table?.getRowModel()?.rows?.map((row) => (
+								<tr key={row.id}>
 									{row.getVisibleCells().map((cell, index) => (
 										<td
 											key={cell.id}
-											className={`whitespace-nowrap  text-sm font-medium text-gray-900 ${
+											className={`whitespace-nowrap  text-sm font-medium text-gray-900 max-w-xs ${
 												index + 1 !== row.getVisibleCells().length
 													? "border-r"
 													: ""

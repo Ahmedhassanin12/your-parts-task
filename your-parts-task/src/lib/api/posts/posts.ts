@@ -20,6 +20,11 @@ export const getPost = async (id: number): Promise<IPostType> => {
   return response.data
 };
 
+export const addPost = async (data: Pick<IPostType, "body" | "title">): Promise<IPostType[]> => {
+  const response = await api.post<IPostType[]>("/posts", { ...data, userId: 1 });
+  return response.data
+};
+
 export const editPost = async (id: number, data: Partial<IPostType>): Promise<IPostType[]> => {
   const response = await api.patch<IPostType[]>(`/posts/${id}`, data);
   return response.data

@@ -6,12 +6,15 @@ export const routing = defineRouting({
   defaultLocale: 'en',
   pathnames: {
     '/': '/',
-    '/pathnames': {
-      en: '/pathnames',
-      ar: '/المسارات'
+    '/comments': {
+      en: '/comments',
+      ar: '/التعليقات'
     }
   }
 });
+
+export type Pathnames = keyof typeof routing.pathnames;
+
 
 // Lightweight wrappers around Next.js' navigation APIs
 // that will consider the routing configuration
