@@ -16,7 +16,7 @@ export const getPosts = async (pageNumber: number): Promise<IPostType[]> => {
 };
 
 export const getPost = async (id: number): Promise<IPostType> => {
-  const response = await api.get<IPostType>(`/posts${id}`,);
+  const response = await api.get<IPostType>(`/posts/${id}`,);
   return response.data
 };
 
