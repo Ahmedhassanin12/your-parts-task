@@ -1,82 +1,51 @@
-Next.js Project with Vitest
-This is a Next.js project that includes CRUD functionality for posts and uses Vitest for unit testing.
+# Next.js Project with Vitest  
 
-Table of Contents
-Features
+This is a Next.js project that includes CRUD functionality for posts and uses Vitest for unit testing.  
 
-Technologies
+## Table of Contents  
+- [Features](#features)  
+- [Technologies](#technologies)  
+- [Setup](#setup)  
+- [Running the Project](#running-the-project)  
+- [Running Tests](#running-tests)  
+- [Project Structure](#project-structure)  
+- [Contributing](#contributing)  
+- [License](#license)  
 
-Setup
+## Features  
+- **CRUD Operations**: Create, Read, Update, and Delete posts.  
+- **Unit Testing**: Comprehensive unit tests for all CRUD functions using Vitest.  
+- **API Integration**: Integration with a mock API ([JSONPlaceholder](https://jsonplaceholder.typicode.com)) for fetching and managing posts.  
 
-Running the Project
+## Technologies  
+- **[Next.js](https://nextjs.org/)** - React framework for server-side rendering and static site generation.  
+- **[Vitest](https://vitest.dev/)** - A Vite-native unit test framework.  
+- **[Axios](https://axios-http.com/)** - Promise-based HTTP client for making API requests.  
+- **[TypeScript](https://www.typescriptlang.org/)** - Strongly typed JavaScript.  
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for styling.  
 
-Running Tests
+## Setup  
 
-Project Structure
-
-Contributing
-
-License
-
-Features
-CRUD Operations: Create, Read, Update, and Delete posts.
-
-Unit Testing: Comprehensive unit tests for all CRUD functions using Vitest.
-
-API Integration: Integration with a mock API (JSONPlaceholder) for fetching and managing posts.
-
-Technologies
-Next.js - React framework for server-side rendering and static site generation.
-
-Vitest - A Vite-native unit test framework.
-
-Axios - Promise-based HTTP client for making API requests.
-
-TypeScript - Strongly typed JavaScript.
-
-Tailwind CSS - Utility-first CSS framework for styling.
-
-Setup
-Clone the repository:
-
-bash
-Copy
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-Install dependencies:
-
-bash
-Copy
+### Clone the repository  
+```bash
+git clone https://github.com/Ahmedhassanin12/your-parts-task.git
+cd your-parts-task
+``` 
+### Install deps
+```bash
 npm install
-Set up environment variables (if applicable):
-Create a .env.local file in the root directory and add any required environment variables:
-
-env
-Copy
-NEXT_PUBLIC_API_URL=https://jsonplaceholder.typicode.com
-Running the Project
-To start the development server, run:
-
-bash
-Copy
+```
+### run the prooject
+```bash
 npm run dev
-Open your browser and navigate to http://localhost:3000 to view the application.
-
-Running Tests
-This project uses Vitest for unit testing. To run the tests, use the following command:
-
-bash
-Copy
-npm test
-To run tests in watch mode (automatically re-run tests when files change), use:
-
-bash
-Copy
-npm test -- --watch
-Project Structure
+```
+### run tests
+```bash
+npm run test
+```
+### Project Structure
 Here’s an overview of the project structure:
-
-Copy
+```bash
 next.js-project/
 ├── .storybook/            # Storybook configuration
 ├── .vscode/               # VSCode settings
@@ -102,17 +71,9 @@ next.js-project/
 ├── README.md              # Project documentation
 ├── tailwind.config.ts     # Tailwind CSS configuration
 └── tsconfig.json          # TypeScript configuration
-Contributing
-Contributions are welcome! If you'd like to contribute, please follow these steps:
+```
 
-Fork the repository.
 
-Create a new branch for your feature or bugfix.
 
-Commit your changes.
-
-Push your branch and submit a pull request.
-
-Please ensure your code follows the project's coding standards and includes appropriate tests.
 
 
