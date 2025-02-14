@@ -1,16 +1,15 @@
 "use client";
 import Button from "@/common/components/Button/Button";
-import { deletePost } from "@/lib/api/posts/posts";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-
+// import { deletePost } from "@/lib/api/posts/posts";
+import { useQuery } from "@tanstack/react-query";
 import { memo, useState } from "react";
 import { getUsers } from "@/lib/api/users/users";
 import UserCard from "./components/UserCard";
 
 const UsersModule = () => {
-	const queryClient = useQueryClient();
+	// const queryClient = useQueryClient();
 
-	const [pagination, setPagination] = useState({
+	const [pagination] = useState({
 		pageIndex: 0,
 		pageSize: 10,
 	});
@@ -21,14 +20,14 @@ const UsersModule = () => {
 		},
 	});
 
-	const { mutate, isPending } = useMutation({
-		mutationFn: async (id: number) => {
-			return await deletePost(id);
-		},
-		onSuccess: () => {
-			queryClient.invalidateQueries({ queryKey: ["Users"] });
-		},
-	});
+	// const { mutate, isPending } = useMutation({
+	// 	mutationFn: async (id: number) => {
+	// 		return await deletePost(id);
+	// 	},
+	// 	onSuccess: () => {
+	// 		queryClient.invalidateQueries({ queryKey: ["Users"] });
+	// 	},
+	// });
 
 	return (
 		<section
