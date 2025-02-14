@@ -6,9 +6,9 @@ export const routing = defineRouting({
   defaultLocale: 'en',
   pathnames: {
     '/': '/',
-    '/comments': {
-      en: '/comments',
-      ar: '/التعليقات'
+    '/users': {
+      en: '/users',
+      ar: '/الزوار'
     }
   }
 });

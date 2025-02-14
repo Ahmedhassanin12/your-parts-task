@@ -5,3 +5,9 @@ const api = axios.create({
 });
 
 export default api;
+
+
+export const userApi = axios.create({
+  baseURL: "https://reqres.in/api/",
+});
+
