@@ -46,7 +46,7 @@ export default async function LocaleLayout({
 			>
 				<LocalProvider locale={locale} messages={messages}>
 					<ReactQueryProvider>
-						<main className="relative grid gap-2 grid-cols-[280px,1fr] max-h-screen overflow-hidden">
+						<main className="relative grid gap-2 grid-cols-[120px,1fr]  sm:grid-cols-[280px,1fr] max-h-screen overflow-hidden">
 							<Sidebar />
 							{children}
 						</main>
