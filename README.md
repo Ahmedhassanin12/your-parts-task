@@ -22,7 +22,8 @@ This is a Next.js project that includes CRUD functionality for posts and uses Vi
 - **[Vitest](https://vitest.dev/)** - A Vite-native unit test framework.  
 - **[Axios](https://axios-http.com/)** - Promise-based HTTP client for making API requests.  
 - **[TypeScript](https://www.typescriptlang.org/)** - Strongly typed JavaScript.  
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for styling.  
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for styling.
+- **[story book](https://storybook.js.org/)** - to build and test UI components in isolation.  
 
 ## Setup  
 
@@ -43,6 +44,15 @@ npm run dev
 ```bash
 npm run test
 ```
+
+
+
+### Running Storybook
+To start Storybook locally, run: 
+```bash
+npm run storybook
+```
+
 ### Project Structure
 Here’s an overview of the project structure:
 ```bash
